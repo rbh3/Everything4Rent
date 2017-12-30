@@ -1,0 +1,69 @@
+.root{
+    -fx-background-image: url("//src/bk.PNG");
+    -fx-background-size: cover;
+}
+
+Label{
+    -fx-font-weight: bold;
+    -fx-font-family: "Ariel";
+    -fx-text-fill: white;
+    -fx-stroke: black;
+    -fx-stroke-width: 5;
+}
+
+Text{
+    -fx-font-weight: bold;
+    -fx-font-family: "Ariel";
+}
+Button {
+    -fx-background-color:
+            rgba(0,0,0,0.08),
+            linear-gradient(#5a61af, #51536d),
+            linear-gradient(#e4fbff 0%,#cee6fb 10%, #a5d3fb 50%, #88c6fb 51%, #d5faff 100%);
+    -fx-background-insets: 0 0 -1 0,0,1;
+    -fx-background-radius: 5,5,4;
+    -fx-padding: 3 30 3 30;
+    -fx-text-fill: #242d35;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+}
+
+
+
+Button:hover{
+    -fx-background-color:
+            rgba(0,0,0,0.08),
+            linear-gradient(#9a9a9a, #909090),
+            linear-gradient(white 0%, #f3f3f3 50%, #ececec 51%, #f2f2f2 100%);
+    -fx-background-insets: 0 0 -1 0,0,1;
+    -fx-background-radius: 5,5,4;
+    -fx-padding: 3 30 3 30;
+    -fx-text-fill: #242d35;
+    -fx-font-size: 16px;
+}
+
+iphone-toolbar {
+    -fx-background-color: linear-gradient(#98a8bd 0%, #8195af 25%, #6d86a4 100%);
+}
+#lion-default {
+    -fx-background-color:
+            rgba(0,0,0,0.08),
+            linear-gradient(#5a61af, #51536d),
+            linear-gradient(#e4fbff 0%,#cee6fb 10%, #a5d3fb 50%, #88c6fb 51%, #d5faff 100%);
+    -fx-background-insets: 0 0 -1 0,0,1;
+    -fx-background-radius: 5,5,4;
+    -fx-padding: 3 30 3 30;
+    -fx-text-fill: #242d35;
+    -fx-font-size: 14px;
+}
+#lion {
+    -fx-background-color:
+            rgba(0,0,0,0.08),
+            linear-gradient(#9a9a9a, #909090),
+            linear-gradient(white 0%, #f3f3f3 50%, #ececec 51%, #f2f2f2 100%);
+    -fx-background-insets: 0 0 -1 0,0,1;
+    -fx-background-radius: 5,5,4;
+    -fx-padding: 3 30 3 30;
+    -fx-text-fill: #242d35;
+    -fx-font-size: 14px;
+}

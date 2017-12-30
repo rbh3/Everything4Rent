@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.editHome">
+    <children>
+        <Label layoutX="244.0" layoutY="20.0" text="עריכת נדל&quot;ן">
+            <font>
+                <Font size="21.0" />
+            </font>
+        </Label>
+        <Label layoutX="387.0" layoutY="70.0" text="רחוב" />
+        <TextField fx:id="street" layoutX="162.0" layoutY="65.0" />
+        <Label layoutX="364.0" layoutY="115.0" text="מס בית ודירה" />
+        <TextField fx:id="stnum" layoutX="162.0" layoutY="110.0" />
+        <TextField fx:id="city" layoutX="162.0" layoutY="159.0" />
+        <Label layoutX="392.0" layoutY="164.0" text="עיר" />
+        <Label layoutX="366.0" layoutY="211.0" text="מס' אנשים מקסימלי בנכס" />
+        <TextField fx:id="maxppl" layoutX="162.0" layoutY="206.0" />
+        <Label layoutX="367.0" layoutY="251.0" text="גודל (במ&quot;ר)" />
+        <TextField fx:id="size" layoutX="162.0" layoutY="246.0" />
+        <ChoiceBox fx:id="kindofhome" layoutX="159.0" layoutY="294.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="31.0" prefWidth="221.0" />
+        <Button fx:id="editit" onAction="#editNow" layoutX="237.0" layoutY="349.0" mnemonicParsing="false" text="עדכן" />
+    </children>
+</AnchorPane>

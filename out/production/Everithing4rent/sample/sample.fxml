@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Main">
+   <children>
+      <MenuBar fx:id="menu" layoutY="-2.0" prefHeight="32.0" prefWidth="800.0">
+        <menus>
+          <Menu fx:id="hello" mnemonicParsing="false" text="Hello Guest" />
+          <Menu mnemonicParsing="false" text="Sign">
+               <items>
+                  <MenuItem fx:id="li" mnemonicParsing="false" onAction="#loginwin" text="Sign In / Up" visible="true" />
+                   <MenuItem fx:id="lo" disable="true" mnemonicParsing="false" onAction="#logout" text="Sign Out" />
+
+               </items></Menu>
+            <Menu fx:id="crud" disable="true" mnemonicParsing="false" text="Packages">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#myPack" text="My Packages" />
+                  <Menu mnemonicParsing="false" text="Add Package">
+                    <items>
+                      <MenuItem onAction="#addwin" mnemonicParsing="false" text="Package for Rent" />
+                        <MenuItem disable="true" mnemonicParsing="false" text="Package for Lent" />
+                        <MenuItem disable="true" mnemonicParsing="false" text="Package for Trade" />
+                    </items>
+                  </Menu>
+               </items></Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

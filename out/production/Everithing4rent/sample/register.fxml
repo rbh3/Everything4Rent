@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="664.0" prefWidth="521.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.regCTR">
+   <children>
+      <Text layoutX="364.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="שם משתמש" />
+      <TextField fx:id="usernamefld" layoutX="155.0" layoutY="86.0" />
+      <PasswordField fx:id="pass1fld" layoutX="156.0" layoutY="130.0" promptText="סיסמא עם 6 תווים לפחות" />
+      <PasswordField fx:id="pass2fld" layoutX="155.0" layoutY="175.0" promptText="חזור על הסיסמא" />
+      <TextField fx:id="mailfld" layoutX="155.0" layoutY="220.0" />
+      <TextField fx:id="fnamefld" layoutX="156.0" layoutY="269.0" />
+      <TextField fx:id="lnamefld" layoutX="157.0" layoutY="306.0" />
+      <DatePicker fx:id="birthdayfld" layoutX="155.0" layoutY="351.0" prefHeight="31.0" prefWidth="187.0" />
+      <Text layoutX="382.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="סיסמא" />
+      <Text layoutX="370.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="חזור על הסיסמא" />
+      <Button fx:id="picfld" layoutX="154.0" layoutY="400.0" mnemonicParsing="false" onAction="#upldpic" prefHeight="31.0" prefWidth="194.0" text="בחר תמונה...." />
+      <ChoiceBox fx:id="q1cb" layoutX="354.0" layoutY="463.0" value="בחר שאלת אבטחה 1" />
+      <ChoiceBox fx:id="q2cb" layoutX="356.0" layoutY="510.0" value="בחר שאלת אבטחה 2" />
+      <TextField fx:id="q1fld" layoutX="145.0" layoutY="458.0" />
+      <TextField fx:id="q2fld" layoutX="145.0" layoutY="510.0" />
+      <CheckBox fx:id="checkbox" alignment="CENTER" layoutX="350.0" layoutY="569.0" mnemonicParsing="false" textAlignment="RIGHT" textOverrun="CLIP" />
+
+      <Text layoutX="383.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="שם פרטי" />
+      <Text layoutX="373.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="שם משפחה" />
+      <Text layoutX="375.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" text="תאריך לידה" />
+      <Text layoutX="166.0" layoutY="586.0" strokeType="OUTSIDE" strokeWidth="0.0" text="אני מסכים לתנאי השימוש" />
+
+      <Button fx:id="regbtm" layoutX="228.0" layoutY="608.0" mnemonicParsing="false" onAction="#register" text="הרשם!" />
+      <Text layoutX="174.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="יש למלא את כל השדות" />
+
+      <Text layoutX="377.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="דואר אלקטרוני" />
+   </children>
+</AnchorPane>
