@@ -6,15 +6,15 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <ChoiceBox fx:id="pkg" layoutX="68.0" layoutY="69.0" prefHeight="31.0" prefWidth="330.0" />
+      <ChoiceBox fx:id="pkg" layoutX="68.0" layoutY="69.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="31.0" prefWidth="330.0" />
       <Label alignment="CENTER" layoutX="174.0" layoutY="23.0" prefHeight="31.0" prefWidth="218.0" text="עריכה ומחיקת חבילות">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <ChoiceBox fx:id="prod" layoutX="68.0" layoutY="125.0" prefHeight="31.0" prefWidth="330.0" />
+      <ChoiceBox fx:id="prod" layoutX="68.0" layoutY="125.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="31.0" prefWidth="330.0" />
       <Label alignment="CENTER" layoutX="421.0" layoutY="74.0" prefHeight="21.0" prefWidth="100.0" text="בחר חבילה" textAlignment="CENTER" />
       <Label alignment="CENTER" layoutX="421.0" layoutY="130.0" prefHeight="21.0" prefWidth="100.0" text="בחר מוצרים" textAlignment="CENTER" />
       <Button fx:id="edit" layoutX="119.0" layoutY="185.0" mnemonicParsing="false" onAction="#editprod" prefHeight="31.0" prefWidth="299.0" text="ערוך מוצר מסומן" />

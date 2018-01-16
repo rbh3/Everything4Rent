@@ -9,23 +9,23 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="664.0" prefWidth="521.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.regCTR">
+<AnchorPane prefHeight="664.0" prefWidth="521.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.regCTR">
    <children>
       <Text layoutX="364.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="שם משתמש" />
-      <TextField fx:id="usernamefld" layoutX="155.0" layoutY="86.0" />
-      <PasswordField fx:id="pass1fld" layoutX="156.0" layoutY="130.0" promptText="סיסמא עם 6 תווים לפחות" />
-      <PasswordField fx:id="pass2fld" layoutX="155.0" layoutY="175.0" promptText="חזור על הסיסמא" />
-      <TextField fx:id="mailfld" layoutX="155.0" layoutY="220.0" />
-      <TextField fx:id="fnamefld" layoutX="156.0" layoutY="269.0" />
-      <TextField fx:id="lnamefld" layoutX="157.0" layoutY="306.0" />
-      <DatePicker fx:id="birthdayfld" layoutX="155.0" layoutY="351.0" prefHeight="31.0" prefWidth="187.0" />
+      <TextField fx:id="usernamefld" alignment="CENTER_RIGHT" layoutX="155.0" layoutY="86.0" />
+      <PasswordField fx:id="pass1fld" alignment="CENTER_RIGHT" layoutX="156.0" layoutY="130.0" promptText="סיסמא עם 6 תווים לפחות" />
+      <PasswordField fx:id="pass2fld" alignment="CENTER_RIGHT" layoutX="155.0" layoutY="175.0" promptText="חזור על הסיסמא" />
+      <TextField fx:id="mailfld" alignment="CENTER_RIGHT" layoutX="155.0" layoutY="220.0" />
+      <TextField fx:id="fnamefld" alignment="CENTER_RIGHT" layoutX="156.0" layoutY="269.0" />
+      <TextField fx:id="lnamefld" alignment="CENTER_RIGHT" layoutX="157.0" layoutY="306.0" />
+      <DatePicker fx:id="birthdayfld" layoutX="155.0" layoutY="351.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="31.0" prefWidth="187.0" />
       <Text layoutX="382.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="סיסמא" />
       <Text layoutX="370.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="חזור על הסיסמא" />
       <Button fx:id="picfld" layoutX="154.0" layoutY="400.0" mnemonicParsing="false" onAction="#upldpic" prefHeight="31.0" prefWidth="194.0" text="בחר תמונה...." />
-      <ChoiceBox fx:id="q1cb" layoutX="354.0" layoutY="463.0" value="בחר שאלת אבטחה 1" />
-      <ChoiceBox fx:id="q2cb" layoutX="356.0" layoutY="510.0" value="בחר שאלת אבטחה 2" />
-      <TextField fx:id="q1fld" layoutX="145.0" layoutY="458.0" />
-      <TextField fx:id="q2fld" layoutX="145.0" layoutY="510.0" />
+      <ChoiceBox fx:id="q1cb" layoutX="354.0" layoutY="463.0" nodeOrientation="RIGHT_TO_LEFT" value="בחר שאלת אבטחה 1" />
+      <ChoiceBox fx:id="q2cb" layoutX="356.0" layoutY="510.0" nodeOrientation="RIGHT_TO_LEFT" value="בחר שאלת אבטחה 2" />
+      <TextField fx:id="q1fld" alignment="CENTER_RIGHT" layoutX="145.0" layoutY="458.0" />
+      <TextField fx:id="q2fld" alignment="CENTER_RIGHT" layoutX="145.0" layoutY="510.0" />
       <CheckBox fx:id="checkbox" alignment="CENTER" layoutX="350.0" layoutY="569.0" mnemonicParsing="false" textAlignment="RIGHT" textOverrun="CLIP" />
 
       <Text layoutX="383.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="שם פרטי" />
