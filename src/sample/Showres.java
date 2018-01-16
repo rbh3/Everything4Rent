@@ -35,6 +35,13 @@ public class Showres {
     public static Stage stage;
     @FXML
     public void initialize() throws Exception {
+        if(Search.ans.size()==0)
+        {
+            showAlertInfo("אין תוצאות");
+            Stage s=(Stage)trade.getScene().getWindow();
+            s.close();
+            return;
+        }
         packages=new HashMap<>();
         for (Packet pac : Search.ans) {
             String name = pac.getpName();
