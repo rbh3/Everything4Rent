@@ -18,6 +18,7 @@ import org.ibex.nestedvm.util.Seekable;
 
 import java.io.*;
 import java.nio.file.Files;
+import java.sql.SQLException;
 
 public class Main extends Application {
 
@@ -29,6 +30,15 @@ public class Main extends Application {
     public Menu crud;
 
     public static Integer PacketsForRentInd=0;
+    public static Integer RealEstateID=0;
+    public static Integer PetID=0;
+    public static Integer CarID=0;
+    public static Integer elec=0;
+    public static Integer furn=0;
+    public static Integer cell=0;
+    public static Integer secHans=0;
+    public static Integer Orders=0;
+
 
     public static Stage primeryS;
     static BooleanProperty isloogedin=new SimpleBooleanProperty(false);
@@ -50,12 +60,18 @@ public class Main extends Application {
         ObjectInputStream in = null;
         try {
             in = new ObjectInputStream(new FileInputStream("./src/num"));
+            PacketsForRentInd=(int) in.readObject();
+            RealEstateID=(int) in.readObject();
+            PetID=(int) in.readObject();
+            CarID=(int) in.readObject();
+            elec=(int) in.readObject();
+            furn=(int) in.readObject();
+            cell=(int) in.readObject();
+            secHans=(int) in.readObject();
+            Orders=(int) in.readObject();
         } catch (Exception e) {
-            PacketsForRentInd = 0;
-            e.printStackTrace();
             return;
         }
-        PacketsForRentInd = (int) in.readObject();
         in.close();
     }
 
@@ -93,7 +109,23 @@ public class Main extends Application {
         s.initModality(Modality.WINDOW_MODAL);
         s.initOwner(Main.primeryS);
         s.show();
-        s.setOnCloseRequest(event -> s.close());
+        s.setOnCloseRequest(event ->s.close());
+    }
+
+    public void Searchwin() throws IOException
+    {
+        Stage s = new Stage();
+        s.setTitle("Search");
+        AnchorPane root = FXMLLoader.load(getClass().getResource("../sample/Search.fxml"));
+        Scene scene = new Scene(root, 447, 358);
+        scene.getStylesheets().add(getClass().getResource("b.css").toExternalForm());
+        //styiling
+        s.setScene(scene);
+        s.setResizable(false);
+        s.initModality(Modality.WINDOW_MODAL);
+        s.initOwner(Main.primeryS);
+        s.show();
+        s.setOnCloseRequest(event ->s.close());
     }
     public void logout() throws IOException
     {
@@ -118,7 +150,15 @@ public class Main extends Application {
         ObjectOutputStream writer = null;
         try {
             writer = new ObjectOutputStream(new FileOutputStream("./src/num"));
-            writer.writeObject(PacketsForRentInd);
+            writer.writeObject(Main.PacketsForRentInd);
+            writer.writeObject(Main.RealEstateID);
+            writer.writeObject(Main.CarID);
+            writer.writeObject(Main.PetID);
+            writer.writeObject(Main.elec);
+            writer.writeObject(Main.furn);
+            writer.writeObject(Main.cell);
+            writer.writeObject(Main.secHans);
+            writer.writeObject(Main.Orders);
         } catch (IOException e) {
             e.printStackTrace();
         } finally {

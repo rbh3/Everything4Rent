@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="234.0" prefWidth="286.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.trade">
+   <children>
+      <Label layoutX="55.0" layoutY="29.0" text="בחר חבילה להחלפה">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="chooser" layoutX="27.0" layoutY="82.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="26.0" prefWidth="231.0" />
+      <Button layoutX="90.0" layoutY="142.0" mnemonicParsing="false" onAction="#choose" prefHeight="26.0" prefWidth="105.0" text="בחר" />
+   </children>
+</AnchorPane>

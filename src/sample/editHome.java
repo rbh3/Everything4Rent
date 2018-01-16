@@ -5,10 +5,7 @@ import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.sql.Connection;
@@ -25,6 +22,12 @@ public class editHome {
     public TextField city;
     public TextField maxppl;
     public TextField size;
+    public CheckBox karaokechk;
+    public CheckBox poolchk;
+    public CheckBox balconychk;
+    public CheckBox smokechk;
+    public CheckBox tvchk;
+    public CheckBox speakerschk;
     Connection conn;
 
     @FXML
@@ -68,6 +71,31 @@ public class editHome {
             case "Venue":kindofhome.setValue("אולם אירועים"); break;
             case "Office":kindofhome.setValue("משרד"); break;
         }
+        if(rs.getString(9).equals("true"))
+            karaokechk.selectedProperty().setValue(true);
+        else
+            karaokechk.selectedProperty().setValue(false);
+        if(rs.getString(10).equals("true"))
+            poolchk.selectedProperty().setValue(true);
+        else
+            poolchk.selectedProperty().setValue(false);
+        if(rs.getString(11).equals("true"))
+            balconychk.selectedProperty().setValue(true);
+        else
+            balconychk.selectedProperty().setValue(false);
+        if(rs.getString(12).equals("true"))
+            smokechk.selectedProperty().setValue(true);
+        else
+            smokechk.selectedProperty().setValue(false);
+        if(rs.getString(13).equals("true"))
+            tvchk.selectedProperty().setValue(true);
+        else
+            tvchk.selectedProperty().setValue(false);
+        if(rs.getString(14).equals("true"))
+            speakerschk.selectedProperty().setValue(true);
+        else
+            speakerschk.selectedProperty().setValue(false);
+
 
     }
 
@@ -81,13 +109,20 @@ public class editHome {
     {
         Stage stage = (Stage) editit.getScene().getWindow();
         PreparedStatement prep = conn.prepareStatement(
-                "UPDATE realEstateItem SET street=? ,streetNum=?,city=?,maxPeople=?,size=?,kind=?" );
+                "UPDATE realEstateItem SET street=? ,streetNum=?,city=?,maxPeople=?,size=?,kind=?,karoke=?,pool=?,balcony=?," +
+                        "smoke=?,tv=?,speakers=? WHERE ID=?" );
 
         prep.setString(1, street.getText());
         prep.setString(2, stnum.getText());
         prep.setString(3, city.getText());
         prep.setString(4, maxppl.getText());
         prep.setString(5, size.getText());
+        prep.setString(7,karaokechk.selectedProperty().getValue().toString());
+        prep.setString(8,poolchk.selectedProperty().getValue().toString());
+        prep.setString(9,balconychk.selectedProperty().getValue().toString());
+        prep.setString(10,smokechk.selectedProperty().getValue().toString());
+        prep.setString(11,tvchk.selectedProperty().getValue().toString());
+        prep.setString(12,speakerschk.selectedProperty().getValue().toString());
         switch (kindofhome.getSelectionModel().getSelectedItem().toString())
         {
             case "סוג מתחם:": showAlertError("יש לבחור מתחם"); return;
@@ -97,6 +132,7 @@ public class editHome {
             case "משרד":  prep.setString(6, "Office"); break;
 
         }
+        prep.setString(13,Controller.selectedID);
         prep.addBatch();
         conn.setAutoCommit(false);
         prep.executeBatch();

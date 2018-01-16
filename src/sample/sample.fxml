@@ -19,14 +19,12 @@
             <Menu fx:id="crud" disable="true" mnemonicParsing="false" text="Packages">
                <items>
                   <MenuItem mnemonicParsing="false" onAction="#myPack" text="My Packages" />
-                  <Menu mnemonicParsing="false" text="Add Package">
-                    <items>
-                      <MenuItem onAction="#addwin" mnemonicParsing="false" text="Package for Rent" />
-                        <MenuItem disable="true" mnemonicParsing="false" text="Package for Lent" />
-                        <MenuItem disable="true" mnemonicParsing="false" text="Package for Trade" />
-                    </items>
-                  </Menu>
-               </items></Menu>
+                   <MenuItem onAction="#addwin" mnemonicParsing="false" text="Add Package" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Search"><items>
+            <MenuItem mnemonicParsing="false" onAction="#Searchwin" text="Search" /></items>
+            </Menu>
         </menus>
       </MenuBar>
    </children>

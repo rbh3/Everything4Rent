@@ -5,10 +5,7 @@ import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.sql.*;
@@ -22,6 +19,13 @@ public class addhome {
     public TextField city;
     public TextField maxppl;
     public TextField size;
+    public CheckBox karaokechk;
+    public CheckBox poolchk;
+    public CheckBox balconychk;
+    public CheckBox smokechk;
+    public CheckBox tvchk;
+    public CheckBox speakerschk;
+
 
     @FXML
     public void initialize()
@@ -57,10 +61,16 @@ public class addhome {
 
     public void addnow() throws Exception
     {
+        if(street.getText().isEmpty()|| stnum.getText().isEmpty() ||city.getText().isEmpty() || maxppl.getText().isEmpty() ||
+                size.getText().isEmpty()) {
+            showAlertError("עליך למלא את כל השדות!!");
+            return;
+        }
         Stage stage = (Stage) addthis.getScene().getWindow();
         PreparedStatement prep = Additem.conn.prepareStatement(
-                "INSERT into realEstateItem values (?,?,?,?,?,?,?,?) ;");
-
+                "INSERT into realEstateItem values (?,?,?,?,?,?,?,?,?,?,?,?,?,?) ;");
+            prep.setString(1,"RE"+Main.RealEstateID);
+            Main.RealEstateID++;
             prep.setString(2, street.getText());
             prep.setString(3, stnum.getText());
             prep.setString(4, city.getText());
@@ -77,7 +87,18 @@ public class addhome {
             }
 
             prep.setString(8, ""+Main.PacketsForRentInd);
-            prep.addBatch();/*
+            prep.setString(9,karaokechk.selectedProperty().getValue().toString());
+            prep.setString(10,poolchk.selectedProperty().getValue().toString());
+            prep.setString(11,balconychk.selectedProperty().getValue().toString());
+            prep.setString(12,smokechk.selectedProperty().getValue().toString());
+            prep.setString(13,tvchk.selectedProperty().getValue().toString());
+            prep.setString(14,speakerschk.selectedProperty().getValue().toString());
+
+
+            prep.addBatch();
+
+
+            /*
 
             conn.setAutoCommit(false);
             prep.executeBatch();

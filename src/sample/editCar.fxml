@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="408.0" prefWidth="570.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.editCar">
+    <children>
+        <Label layoutX="244.0" layoutY="20.0" text="ערוך רכב">
+            <font>
+                <Font size="21.0" />
+            </font>
+        </Label>
+        <Label layoutX="387.0" layoutY="70.0" text="מודל" />
+        <TextField fx:id="model" alignment="CENTER_RIGHT" layoutX="107.0" layoutY="65.0" prefHeight="25.0" prefWidth="204.0" />
+        <Label layoutX="388.0" layoutY="115.0" text="צבע" />
+        <TextField fx:id="color" alignment="CENTER_RIGHT" layoutX="107.0" layoutY="102.0" prefHeight="25.0" prefWidth="204.0" />
+        <TextField fx:id="year" alignment="CENTER_RIGHT" layoutX="107.0" layoutY="143.0" prefHeight="25.0" prefWidth="204.0" />
+        <Label layoutX="361.0" layoutY="150.0" text="שנת ייצור" />
+        <Label layoutX="370.0" layoutY="324.0" text="סוג רכב" />
+        <ChoiceBox fx:id="kindofcar" layoutX="92.0" layoutY="315.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="31.0" prefWidth="221.0" />
+        <Button fx:id="editit" layoutX="254.0" layoutY="355.0" mnemonicParsing="false" onAction="#editNow" text="עדכן" />
+        <Label layoutX="391.0" layoutY="183.0" text="שם" />
+        <TextField fx:id="name" alignment="CENTER_RIGHT" layoutX="107.0" layoutY="180.0" prefHeight="25.0" prefWidth="204.0" />
+        <Label layoutX="380.0" layoutY="226.0" text="תיאור" />
+        <TextField fx:id="desc" alignment="TOP_RIGHT" layoutX="107.0" layoutY="218.0" prefHeight="83.0" prefWidth="204.0" />
+    </children>
+</AnchorPane>
